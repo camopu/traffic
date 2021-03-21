@@ -1,0 +1,63 @@
+// Custom bootstrap
+@import 'custom_bootstrap';
+
+.changelog-container {
+
+  max-height: 25rem;
+
+  strong {
+    color: $menu_icon_color;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-size: 1rem !important;
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 2rem;
+    
+    ul {
+      list-style: initial;
+    }
+  }
+
+  h3::before {
+    content: '';
+    background-image: url('../resources/images/fire.gif');
+    background-size: 15px 15px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    margin-left: -1rem;
+    margin-right: 1rem;
+    margin-bottom: -0.1rem;
+  }
+
+  h1::before {
+    content: '';
+    background-image: url('../resources/images/success.gif');
+    background-size: 25px 25px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    margin-left: -1.5rem;
+    margin-right: .8rem;
+    margin-bottom: -.4rem;
+  }
+
+  h2::before {
+    content: '\F79F';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-left: -1.1rem;
+    margin-right: .8rem;
+    margin-bottom: -.4rem;
+    color: $mp-yellow;
+  }
+
+}

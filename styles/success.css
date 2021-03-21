@@ -1,0 +1,244 @@
+@import url(~@fortawesome/fontawesome-free/css/solid.min.css);
+@import url(~@fortawesome/fontawesome-free/css/regular.min.css);
+@import url(~@fortawesome/fontawesome-free/css/fontawesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto:100, 200, 300,400,600");
+html,
+body,
+#root {
+  height: 100%; }
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px; }
+  * a.animate {
+    color: #909090 !important;
+    transition: border-bottom-color 0.3s linear; }
+    * a.animate:hover {
+      transition: border-bottom-color 0.3s linear;
+      border-bottom: 1px solid #FACC02;
+      text-decoration: none !important; }
+  *:focus {
+    outline: 0; }
+  * .bold {
+    font-weight: 600; }
+  * h2 {
+    font-size: 2rem; }
+  * .example-appear {
+    opacity: 0.01; }
+  * .example-appear.example-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in; }
+  * .example-enter {
+    opacity: 0.01; }
+  * .example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 100ms ease-in; }
+  * .example-leave {
+    opacity: 1; }
+  * .example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 100ms ease-in; }
+  * .error {
+    padding: 1rem 2rem;
+    background-color: #E61A7A;
+    color: #fff;
+    text-align: center;
+    width: 15rem;
+    margin: 0 auto; }
+
+.success-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  .success-container path,
+  .success-container ellipse,
+  .success-container circle,
+  .success-container rect,
+  .success-container polygon,
+  .success-container polyline,
+  .success-container line {
+    stroke-width: 0; }
+  .success-container svg {
+    width: 15rem;
+    margin: 0 auto; }
+
+@keyframes ldt-bounce-in {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  5% {
+    -webkit-transform: scale(0.0846);
+    transform: scale(0.0846); }
+  6% {
+    -webkit-transform: scale(0.191);
+    transform: scale(0.191); }
+  7% {
+    -webkit-transform: scale(0.3255);
+    transform: scale(0.3255); }
+  8% {
+    -webkit-transform: scale(0.4804);
+    transform: scale(0.4804); }
+  9% {
+    -webkit-transform: scale(0.646);
+    transform: scale(0.646); }
+  10% {
+    -webkit-transform: scale(0.8116);
+    transform: scale(0.8116); }
+  11% {
+    -webkit-transform: scale(0.9665);
+    transform: scale(0.9665); }
+  12% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  13% {
+    -webkit-transform: scale(1.2069);
+    transform: scale(1.2069); }
+  14% {
+    -webkit-transform: scale(1.2796);
+    transform: scale(1.2796); }
+  19% {
+    -webkit-transform: scale(1.1558);
+    transform: scale(1.1558); }
+  20% {
+    -webkit-transform: scale(1.07);
+    transform: scale(1.07); }
+  21% {
+    -webkit-transform: scale(0.9823);
+    transform: scale(0.9823); }
+  22% {
+    -webkit-transform: scale(0.901);
+    transform: scale(0.901); }
+  23% {
+    -webkit-transform: scale(0.8328);
+    transform: scale(0.8328); }
+  25% {
+    -webkit-transform: scale(0.7551);
+    transform: scale(0.7551); }
+  29% {
+    -webkit-transform: scale(0.8516);
+    transform: scale(0.8516); }
+  31% {
+    -webkit-transform: scale(0.973);
+    transform: scale(0.973); }
+  33% {
+    -webkit-transform: scale(1.0857);
+    transform: scale(1.0857); }
+  35% {
+    -webkit-transform: scale(1.1538);
+    transform: scale(1.1538); }
+  40% {
+    -webkit-transform: scale(1.0771);
+    transform: scale(1.0771); }
+  42% {
+    -webkit-transform: scale(0.9954);
+    transform: scale(0.9954); }
+  45% {
+    -webkit-transform: scale(0.9057);
+    transform: scale(0.9057); }
+  52% {
+    -webkit-transform: scale(0.9908);
+    transform: scale(0.9908); }
+  56% {
+    -webkit-transform: scale(1.0623);
+    transform: scale(1.0623); }
+  64% {
+    -webkit-transform: scale(0.9845);
+    transform: scale(0.9845); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@-webkit-keyframes ldt-bounce-in {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  5% {
+    -webkit-transform: scale(0.0846);
+    transform: scale(0.0846); }
+  6% {
+    -webkit-transform: scale(0.191);
+    transform: scale(0.191); }
+  7% {
+    -webkit-transform: scale(0.3255);
+    transform: scale(0.3255); }
+  8% {
+    -webkit-transform: scale(0.4804);
+    transform: scale(0.4804); }
+  9% {
+    -webkit-transform: scale(0.646);
+    transform: scale(0.646); }
+  10% {
+    -webkit-transform: scale(0.8116);
+    transform: scale(0.8116); }
+  11% {
+    -webkit-transform: scale(0.9665);
+    transform: scale(0.9665); }
+  12% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  13% {
+    -webkit-transform: scale(1.2069);
+    transform: scale(1.2069); }
+  14% {
+    -webkit-transform: scale(1.2796);
+    transform: scale(1.2796); }
+  19% {
+    -webkit-transform: scale(1.1558);
+    transform: scale(1.1558); }
+  20% {
+    -webkit-transform: scale(1.07);
+    transform: scale(1.07); }
+  21% {
+    -webkit-transform: scale(0.9823);
+    transform: scale(0.9823); }
+  22% {
+    -webkit-transform: scale(0.901);
+    transform: scale(0.901); }
+  23% {
+    -webkit-transform: scale(0.8328);
+    transform: scale(0.8328); }
+  25% {
+    -webkit-transform: scale(0.7551);
+    transform: scale(0.7551); }
+  29% {
+    -webkit-transform: scale(0.8516);
+    transform: scale(0.8516); }
+  31% {
+    -webkit-transform: scale(0.973);
+    transform: scale(0.973); }
+  33% {
+    -webkit-transform: scale(1.0857);
+    transform: scale(1.0857); }
+  35% {
+    -webkit-transform: scale(1.1538);
+    transform: scale(1.1538); }
+  40% {
+    -webkit-transform: scale(1.0771);
+    transform: scale(1.0771); }
+  42% {
+    -webkit-transform: scale(0.9954);
+    transform: scale(0.9954); }
+  45% {
+    -webkit-transform: scale(0.9057);
+    transform: scale(0.9057); }
+  52% {
+    -webkit-transform: scale(0.9908);
+    transform: scale(0.9908); }
+  56% {
+    -webkit-transform: scale(1.0623);
+    transform: scale(1.0623); }
+  64% {
+    -webkit-transform: scale(0.9845);
+    transform: scale(0.9845); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+  .success-container .ldt-bounce-in {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-animation: ldt-bounce-in 1s ease-out forwards;
+    animation: ldt-bounce-in 1s ease-out forwards; }
+  .success-container__inner {
+    color: #fff;
+    padding: 0.5rem 1rem; }

@@ -1,0 +1,106 @@
+// Overridden bootstrap variables etc
+
+@import '~@fortawesome/fontawesome-free/css/solid.min.css';
+@import '~@fortawesome/fontawesome-free/css/regular.min.css';
+@import '~@fortawesome/fontawesome-free/css/fontawesome.min.css';
+
+// Define variables
+$mp-blue: #39A5E4;
+$mp-grey: #404040;
+$mp-yellow: #FACC02;
+$mp-yellow-light: #fcd52a;
+$mp-yellow-lighter: #ffe67a;
+$mp-pink: #E61A7A;
+$mp-pink-light: #e2267f;
+$mp-pink-lighter: #e2589a;
+
+$success-green: #00ce9b;
+
+$dark-blue: #272C32;
+$blue-grey: #3E4652;
+$purple: #673AB7;
+$purple-light: #724aba;
+$purple-lighter: #946cd8;
+
+$body-bg: $blue-grey !important;
+$body-color: #fff;
+
+$menu_icon_color: #909090;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:100, 200, 300,400,600');
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+
+// Site wide css
+* {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+
+  a {
+    &.animate {
+      color: $menu_icon_color !important;
+      transition: border-bottom-color 0.3s linear;
+
+      &:hover {
+        transition: border-bottom-color 0.3s linear;
+        border-bottom: 1px solid $mp-yellow;
+        text-decoration: none !important;
+      }
+    }
+  }
+
+  &:focus {
+    outline:0;
+  }
+
+  .bold {
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .example-appear {
+    opacity: 0.01;
+  }
+
+  .example-appear.example-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+  }
+
+  .example-enter {
+    opacity: 0.01;
+  }
+
+  .example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 100ms ease-in;
+  }
+
+  .example-leave {
+    opacity: 1;
+  }
+
+  .example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 100ms ease-in;
+  }
+
+  .error {
+    padding: 1rem 2rem;
+    background-color: $mp-pink;
+    color: #fff;
+    text-align: center;
+    width: 15rem;
+    margin: 0 auto;
+  }
+}

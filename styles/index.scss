@@ -1,0 +1,19 @@
+// Custom bootstrap
+@import 'custom_bootstrap';
+
+// Bootstrap
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/reboot';
+
+.main-container {
+  display: flex;
+  height: 100%;
+  overflow: auto;
+
+  .loader-container {
+    text-align: center;
+    width: 100%;
+  }
+}

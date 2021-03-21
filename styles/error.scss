@@ -1,0 +1,19 @@
+// Custom bootstrap
+@import 'custom_bootstrap';
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  i {
+    color: $mp-pink;
+    margin: 4rem auto 2rem auto;
+    font-size: 6rem;
+  }
+
+  &__inner {
+    color: #fff;
+    padding: 1rem 1rem 0.5rem;
+  }
+}

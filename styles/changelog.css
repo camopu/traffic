@@ -1,0 +1,92 @@
+@import url(~@fortawesome/fontawesome-free/css/solid.min.css);
+@import url(~@fortawesome/fontawesome-free/css/regular.min.css);
+@import url(~@fortawesome/fontawesome-free/css/fontawesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto:100, 200, 300,400,600");
+html,
+body,
+#root {
+  height: 100%; }
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px; }
+  * a.animate {
+    color: #909090 !important;
+    transition: border-bottom-color 0.3s linear; }
+    * a.animate:hover {
+      transition: border-bottom-color 0.3s linear;
+      border-bottom: 1px solid #FACC02;
+      text-decoration: none !important; }
+  *:focus {
+    outline: 0; }
+  * .bold {
+    font-weight: 600; }
+  * h2 {
+    font-size: 2rem; }
+  * .example-appear {
+    opacity: 0.01; }
+  * .example-appear.example-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in; }
+  * .example-enter {
+    opacity: 0.01; }
+  * .example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 100ms ease-in; }
+  * .example-leave {
+    opacity: 1; }
+  * .example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 100ms ease-in; }
+  * .error {
+    padding: 1rem 2rem;
+    background-color: #E61A7A;
+    color: #fff;
+    text-align: center;
+    width: 15rem;
+    margin: 0 auto; }
+
+.changelog-container {
+  max-height: 25rem; }
+  .changelog-container strong {
+    color: #909090; }
+  .changelog-container h1,
+  .changelog-container h2,
+  .changelog-container h3 {
+    font-size: 1rem !important; }
+  .changelog-container ul {
+    list-style: none;
+    margin-bottom: 2rem; }
+    .changelog-container ul ul {
+      list-style: initial; }
+  .changelog-container h3::before {
+    content: '';
+    background-image: url("../resources/images/fire.gif");
+    background-size: 15px 15px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    margin-left: -1rem;
+    margin-right: 1rem;
+    margin-bottom: -0.1rem; }
+  .changelog-container h1::before {
+    content: '';
+    background-image: url("../resources/images/success.gif");
+    background-size: 25px 25px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    margin-left: -1.5rem;
+    margin-right: .8rem;
+    margin-bottom: -.4rem; }
+  .changelog-container h2::before {
+    content: '\F79F';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-left: -1.1rem;
+    margin-right: .8rem;
+    margin-bottom: -.4rem;
+    color: #FACC02; }

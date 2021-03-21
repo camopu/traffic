@@ -1,0 +1,66 @@
+@import "custom_bootstrap";
+@import "~chartist/dist/chartist.min.css";
+
+
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/bootstrap-grid';
+@import 'node_modules/bootstrap/scss/reboot';
+
+.ct-chart {
+  margin-left: -1rem;
+  margin-right: -1rem;
+  width: calc(100% + 1rem);
+  flex: 1;
+
+  @include media-breakpoint-up(md) {
+  }
+
+  svg {
+    overflow: visible;
+  }
+
+  .ct-grid {
+    display: none;
+  }
+
+  .ct-line {
+    stroke-width: 2px;
+  }
+
+  .ct-series {
+    &-a {
+      .ct-area {
+        fill: $mp-yellow;
+      }
+      .ct-line {
+        stroke: $mp-yellow;
+      }
+    }
+
+    &-b {
+      .ct-area {
+        fill: $mp-pink;
+      }
+      .ct-line {
+        stroke: $mp-pink;
+      }
+    }
+
+    &-c {
+      .ct-area {
+        fill: $mp-blue;
+      }
+      .ct-line {
+        stroke: $mp-blue;
+      }
+    }
+  }
+
+  g.ct-labels {
+    span {
+      color: $menu_icon_color;
+    }
+  }
+}

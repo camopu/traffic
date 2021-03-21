@@ -1,0 +1,88 @@
+// Custom bootstrap
+@import 'custom_bootstrap';
+
+// Bootstrap
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/bootstrap-grid';
+@import 'node_modules/bootstrap/scss/reboot';
+
+button {
+  background-position: center;
+  transition: background 0.5s;
+  cursor: pointer;
+  outline: none !important;
+
+  &:active {
+    background-size: 100%;
+    transition: background 0s;
+  }
+
+  &:disabled {
+    transition: all 0.1s linear;
+    background-color: rgba(255,255,255, 0.2) !important;
+    color: rgba(255,255,255, 0.5) !important;
+    cursor: default;
+  }
+
+  &.add {
+    color: #fff;
+    background-color: $purple;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    border-radius: 5rem;
+
+    &:hover {
+      background: $purple-light radial-gradient(circle, transparent 1%, $purple-light 1%) center/15000%;
+    }
+
+    &:active {
+      background-color: $purple-lighter;
+      background-size: 100%;
+      transition: background 0s;
+    }
+  }
+
+  &.remove {
+    color: #fff;
+    background-color: $mp-pink;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    border-radius: 5rem;
+
+    &:hover {
+      background: $mp-pink-light radial-gradient(circle, transparent 1%, $mp-pink-light 1%) center/15000%;
+    }
+
+    &:active {
+      background-color: $mp-pink-lighter;
+      background-size: 100%;
+      transition: background 0s;
+    }
+  }
+
+  &.confirm {
+    color: #fff;
+    background-color: $mp-yellow;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    border-radius: 5rem;
+
+    &:hover {
+      background: $mp-yellow-light radial-gradient(circle, transparent 1%, $mp-yellow-light 1%) center/15000%;
+    }
+
+    &:active {
+      background-color: $mp-yellow-lighter;
+      background-size: 100%;
+      transition: background 0s;
+    }
+  }
+}

@@ -1,0 +1,232 @@
+// Custom bootstrap
+@import 'custom_bootstrap';
+
+// Bootstrap
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/bootstrap-grid';
+@import 'node_modules/bootstrap/scss/reboot';
+
+.sidebar-container {
+  font-weight: 200;
+
+  @include media-breakpoint-up(xl) {
+    background-color: $dark-blue;
+  }
+
+  .accordion {
+    h3 {
+      font-weight: 200;
+    }
+
+    &__title {
+      position: relative;
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border-bottom: 1px solid $blue-grey;
+    }
+
+    &__arrow {
+      right: 0.5rem;
+    }
+  }
+
+  &.home,
+  &.analytics {
+    /* Mob menu button */
+    button {
+      position: absolute;
+      margin: 0;
+      top: 0.5rem;
+      left: 0;
+      z-index: 99999;
+      cursor: pointer;
+    }
+  }
+
+  /* Depends on main-view-container */
+  &.home {
+
+    /* Only for omb menu views, ie large screens */
+    @include media-breakpoint-up(xl) {
+      flex: 0 0 13.66667%;
+      max-width: 13.66667%;
+    }
+
+    /* Mob menu button */
+    button {
+      @include media-breakpoint-up(xl) {
+        display: none;
+      }
+    }
+  }
+
+  /* on analytics view */
+  &.analytics {
+    /* Only for omb menu views, ie large screens */
+    @media (min-width: 1300px) {
+      flex: 0 0 13.66667%;
+      max-width: 13.66667%;
+
+      button {
+        display: none;
+      }
+    }
+  }
+
+  .menu-container {
+    padding: 2rem 0 0 0 !important;
+    display:flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    background-color: $dark-blue;
+    left: -20rem;
+    z-index: 1;
+    width: 17rem;
+    transition: left 0.1s linear;
+    overflow: auto;
+
+    &.regular {
+      /* See above, when menu button isnt visible */
+      @include media-breakpoint-up(xl) {
+        width: 13.66667%;
+        left: 0;
+      }
+    }
+
+    /* on analytics view */
+    &.analytics {
+      /* Only for omb menu views, ie large screens */
+      @media (min-width: 1300px) {
+        width: 13.66667%;
+        left: 0;
+      }
+    }
+
+    /* Mobile menu opened */
+    &.active {
+      transition: left 0.1s linear;
+      left: 0;
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    }
+
+    &.loading {
+      align-items: center;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+
+      li {
+        padding: 1rem 0;
+        font-weight: 100;
+
+        &.inactive {
+          text-decoration: line-through;
+        }
+
+        a {
+          padding: 0rem 2rem;
+          color: $menu_icon_color;
+          border-left: none;
+          transition: color 0.5s;
+          display: block;
+
+          &:hover {
+            transition: color 0.5s;
+            color: $mp-blue;
+            text-decoration: none;
+          }
+
+          &.active {
+            color: $mp-blue;
+          }
+        }
+
+        i {
+          margin-right: 0.2rem;
+        }
+      }
+    }
+
+    &__user {
+      border-bottom: 1px solid $menu_icon_color;
+      padding-bottom: 2rem;
+
+      &__company {
+        text-align: center;
+        display: block;
+        margin-bottom: 1rem;
+
+        img {
+          width: 4rem;
+        }
+      }
+
+      &__img {
+        border-radius: 10rem;
+        display: block;
+        margin: 0 0 1rem;
+        text-align: center;
+
+        img {
+          border-radius: 20rem;
+          width: 5rem;
+        }
+      }
+
+      &__name {
+        text-transform: capitalize;
+        text-align: center;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+
+      &__icons {
+        display: flex;
+        justify-content: space-evenly;
+        color: $menu_icon_color;
+        padding: 0 2rem;
+
+        i {
+          font-size: 20px;
+        }
+
+        a {
+          color: $menu_icon_color;
+          font-size: 20px;
+          transition: color 0.5s;
+
+          &:hover {
+            transition: color 0.5s;
+            color: $mp-blue;
+            text-decoration: none;
+          }
+
+          &.active {
+            color: $mp-blue;
+          }
+        }
+      }
+    }
+
+    &__personal {
+      padding: 2rem 0;
+      color: $menu_icon_color;
+
+      &__title {
+        font-weight: 600;
+        padding: 0 0 0 2rem;
+        cursor: default;
+      }
+    }
+  }
+}

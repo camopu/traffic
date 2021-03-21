@@ -1,0 +1,55 @@
+// Custom bootstrap
+@import 'custom_bootstrap';
+
+// Bootstrap
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/bootstrap-grid';
+@import 'node_modules/bootstrap/scss/reboot';
+
+.new-user-container {
+  width: 100%;
+  text-align: center;
+
+  &__inner {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+
+    &__input {
+      display: flex;
+      position: relative;
+      align-items: center;
+
+      i {
+        margin-left: 0.5rem;
+
+        &.fa-thumbs-down {
+          color: $mp-pink;
+          transition: color 0.5s;
+        }
+
+        &.fa-thumbs-up {
+          color: $success-green;
+          transition: color 0.5s;
+        }
+
+        &.fa-eye,
+        &.fa-eye-slash {
+          margin: 0rem 1rem 0 -2rem;
+          cursor: pointer;
+        }
+      }
+
+      &.password {
+        padding: 0.5rem 2.5rem 0.5rem 1rem;
+      }
+
+      &__label {
+        line-height: 3rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+}

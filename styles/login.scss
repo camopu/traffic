@@ -1,0 +1,230 @@
+// Custom bootstrap
+@import 'custom_bootstrap';
+
+// Bootstrap
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/bootstrap-grid';
+@import 'node_modules/bootstrap/scss/reboot';
+
+.login-container {
+  height: 100%;
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
+
+  &__left {
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+    padding-top: 10rem;
+    height: 100%;
+
+    @include media-breakpoint-down(sm) {
+      background: linear-gradient(to bottom left, $mp-yellow, $mp-pink, $mp-blue);
+      background-size: 400% 400%;
+
+      -webkit-animation: AnimationName 120s ease infinite;
+      -moz-animation: AnimationName 120s ease infinite;
+      animation: AnimationName 120s ease infinite;
+
+      @-webkit-keyframes AnimationName {
+        0%{background-position:82% 0%}
+        50%{background-position:19% 100%}
+        100%{background-position:82% 0%}
+      }
+      @-moz-keyframes AnimationName {
+        0%{background-position:82% 0%}
+        50%{background-position:19% 100%}
+        100%{background-position:82% 0%}
+      }
+      @keyframes AnimationName {
+        0%{background-position:82% 0%}
+        50%{background-position:19% 100%}
+        100%{background-position:82% 0%}
+      }
+    }
+
+    &__inner {
+
+      a {
+        &.animate {
+          @include media-breakpoint-down(sm) {
+            color: rgba(255,255,255, 0.5) !important;
+          }
+        }
+      }
+
+      &__top {
+        display: flex;
+        margin-bottom: 5rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h2 {
+          font-size: 2rem;
+          text-transform: uppercase;
+        }
+      }
+
+      input {
+        padding: 1rem 0 0.5rem;
+      }
+
+      input[type=text],
+      input[type=password] {
+        border: none;
+        border-bottom: 1px solid rgba(255,255,255, 0.5);
+        background-color: transparent;
+        display: block;
+        width: 20rem;
+        margin-bottom: 2rem;
+        color: #fff;
+
+        @include media-breakpoint-up(md) {
+          border-bottom: 1px solid $blue-grey;
+        }
+
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          color: rgba(255,255,255, 0.5);
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+          color: rgba(255,255,255, 0.5);
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+          color: rgba(255,255,255, 0.5);
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+          color: rgba(255,255,255, 0.5);
+        }
+
+        &.error {
+          border-bottom: 1px solid $mp-pink;
+          text-align: left;
+        }
+      }
+
+      input[type=submit] {
+        display: block;
+        width: 100%;
+        border: none;
+        background-color: $mp-yellow;
+        color: #fff;
+        margin: 4rem 0 1rem;
+        padding: 0.5rem 1rem;
+        transition: background-color 0.1s linear;
+        cursor: pointer;
+
+        &:disabled {
+          background-color: rgba(255,255,255, 0.4);
+          color: rgba(255,255,255, 0.3);
+
+          @include media-breakpoint-up(md) {
+            color: $mp-grey;
+          }
+
+          cursor: default;
+        }
+      }
+
+      a {
+        color: rgba(255,255,255, 0.5) !important;
+      }
+
+      &__form {
+        position: relative;
+
+        &__loader {
+          position: absolute;
+          margin: 0 auto;
+          width: 100%;
+          bottom: 0;
+          text-align: center;
+        }
+      }
+    }
+    &__copyright {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      font-weight: 200;
+      font-size: 12px;
+
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
+    }
+  }
+
+  &__right {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding-top: 10rem;
+
+    background: linear-gradient(to bottom left, $mp-yellow, $mp-pink, $mp-blue);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 120s ease infinite;
+    -moz-animation: AnimationName 120s ease infinite;
+    animation: AnimationName 120s ease infinite;
+
+    @-webkit-keyframes AnimationName {
+      0%{background-position:82% 0%}
+      50%{background-position:19% 100%}
+      100%{background-position:82% 0%}
+    }
+    @-moz-keyframes AnimationName {
+      0%{background-position:82% 0%}
+      50%{background-position:19% 100%}
+      100%{background-position:82% 0%}
+    }
+    @keyframes AnimationName {
+      0%{background-position:82% 0%}
+      50%{background-position:19% 100%}
+      100%{background-position:82% 0%}
+    }
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+    }
+
+    img {
+      width: 25vw;
+    }
+
+    h2 {
+      font-weight: 200;
+      margin-top: 4rem;
+      padding: 0;
+      font-size: 1rem;
+
+      @include media-breakpoint-up(md) {
+        padding: 0 5rem;
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding: 0 10rem;
+      }
+    }
+
+    &__copyright {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      font-weight: 200;
+      font-size: 12px;
+    }
+  }
+
+  &__left,
+  &__right {
+    @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+  }
+}

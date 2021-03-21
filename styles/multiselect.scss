@@ -1,0 +1,80 @@
+// Custom bootstrap
+@import 'custom_bootstrap';
+
+// Bootstrap
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/bootstrap-grid';
+@import 'node_modules/bootstrap/scss/reboot';
+
+
+.multiselect-container {
+
+  &__title {
+    position: relative;
+    color: $menu_icon_color;
+    cursor: pointer;
+    padding: 0.5rem 3.3rem;
+
+    &.active {
+      color: #fff;
+      border: 1px solid $mp-blue;
+      border-bottom: none;
+
+      i {
+        transform: rotate(180deg);
+        transition-property: transform;
+        transition: all 0.1s linear;
+      }
+    }
+
+    i {
+      position: absolute;
+      right: 0.5rem;
+      top: 0.7rem;
+      margin: 0 !important;
+      transform: rotate(0deg);
+      transition-property: transform;
+      transition: all 0.1s linear;
+    }
+  }
+
+  &__inner {
+    text-align: left;
+    height: 100px;
+    overflow-y: auto;
+    left: 0;
+    top: 2.5rem;
+    position: absolute;
+    width: 10rem;
+    background-color: $dark-blue;
+    z-index: 1;
+    padding: 0 0.5rem;
+    border: 1px solid $mp-blue;
+    border-top: none;
+
+    &__element {
+      text-transform: capitalize;
+      display: flex;
+      align-items: center;
+
+      input {
+        margin-right: 0.5rem;
+
+        + div {
+          color: $menu_icon_color;
+          transition: color 0.1s linear;
+        }
+
+        &:checked {
+          + div {
+            color: #fff;
+            transition: color 0.1s linear;
+          }
+        }
+
+      }
+    }
+  }
+}

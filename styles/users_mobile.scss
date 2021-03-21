@@ -1,0 +1,94 @@
+@import "custom_bootstrap";
+
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/bootstrap-grid';
+@import 'node_modules/bootstrap/scss/reboot';
+
+.users-mobile {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include media-breakpoint-up(xl) {
+    display: none;
+  }
+
+  &__user {
+    flex: 1;
+    margin: 1rem;
+    padding: 2rem;
+    background-color: $blue-grey;
+    color: $menu_icon_color;
+
+    @include media-breakpoint-up(md) {
+      margin: 2rem;
+    }
+
+    &__top {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      &__image {
+        img {
+          width: 5rem;
+          height: 5rem;
+          -webkit-border-radius: 20rem;
+          -moz-border-radius: 20rem;
+          border-radius: 20rem;
+        }
+      }
+    }
+
+    &__middle {
+      margin: 2rem 0;
+
+      &__email {
+        transition: color linear 0.5s;
+
+        &.active {
+          transition: color linear 0.5s;
+          color: #fff;
+          text-align: center;
+        }
+      }
+
+      &__editables {
+        .multiselect-container,
+        .usertype,
+        .password {
+          margin: 1rem 0;
+        }
+
+        select,
+        input[type='password'] {
+          width: 100%;
+        }
+
+        .active {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    &__bottom {
+      button {
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+
+        &.edit {
+          background-color: $purple;
+        }
+
+        &.save {
+          background-color: $success-green;
+        }
+      }
+    }
+  }
+}
